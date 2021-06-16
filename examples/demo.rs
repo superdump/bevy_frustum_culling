@@ -66,7 +66,7 @@ fn setup(
                 ..Default::default()
             });
         })
-        .insert_bundle(LightBundle {
+        .insert_bundle(PointLightBundle {
             transform: Transform::from_translation(Vec3::new(4.0, 8.0, 4.0)),
             ..Default::default()
         });

@@ -5,13 +5,17 @@ authors = ["Aevyrie Roessler <aevyrie@gmail.com>"]
 edition = "2018"
 
 [dependencies]
-bevy = { version = "0.5", default-features = false, features = ["render"] }
-bevy_mod_bounding = "0.1"
+bevy = { git = "https://github.com/superdump/bevy", branch = "main-naga", default-features = false, features = ["render"] }
+# bevy_mod_bounding = "0.1"
+bevy_mod_bounding = { git = "https://github.com/superdump/bevy_mod_bounding", branch = "bevy-main" }
 
 [dev-dependencies]
-bevy = { version = "0.5", default-features = false, features = [
+bevy = { git = "https://github.com/superdump/bevy", branch = "main-naga", default-features = false, features = [
     "bevy_wgpu",
     "bevy_winit",
     "bevy_gltf",
     "x11",
 ] }
+
+[patch.crates-io]
+bevy = { git = "https://github.com/superdump/bevy", branch = "main-naga" }
